@@ -1,0 +1,56 @@
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set smartindent
+set expandtab
+
+
+set relativenumber
+set number
+
+
+set si
+set nowrap
+set tw=500
+set lbr
+set scrolloff=8
+
+
+set hidden
+filetype indent on
+
+
+set nocompatible
+set splitbelow splitright
+set wildmenu
+
+
+set incsearch
+set colorcolumn=80
+
+
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+call plug#begin('~/.vim/plug.vim')
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+"Plug 'gruvbox-community/gruvbox'
+
+call plug#end()
+
+
+"let g:airline_theme = 'gruvbox'
+
+
+"colorscheme gruvbox
+set bg=dark
+map :nt :NERDTree<CR>
+
+
+let mapleader = " "
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
